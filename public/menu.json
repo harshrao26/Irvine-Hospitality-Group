@@ -1,0 +1,35 @@
+[
+  {
+    "label": "Home",
+    "sublinks": []
+  },
+  {
+    "label": "Our Products",
+    "sublinks": [
+      "Casegoods",
+      "Seating",
+      "Lights",
+      "Tables",
+      "Operating Equipments",
+      "Outdoor",
+      "Fabrics",
+      "Finishes"
+    ]
+  },
+  {
+    "label": "Portfolio",
+    "sublinks": []
+  },
+  {
+    "label": "References",
+    "sublinks": []
+  },
+  {
+    "label": "Contact",
+    "sublinks": []
+  },
+  {
+    "label": "Shop",
+    "sublinks": []
+  }
+]
