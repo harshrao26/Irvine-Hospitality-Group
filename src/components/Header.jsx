@@ -133,9 +133,9 @@ export default function Navbar() {
               <button className="bg-[#FF9D31] text-white py-2 rounded-full text-sm font-semibold">
                 Contact
               </button>
-              <div className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-sm text-white">
+              {/* <div className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-sm text-white">
                 EN
-              </div>
+              </div> */}
             </div>
           </ul>
         </div>
