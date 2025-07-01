@@ -60,7 +60,7 @@ export default function EventGalleryCarousel() {
   };
 
   return (
-    <div className="bg-[#F5F5F5] py-12">
+    <div className="bg-[#F5F5F5] py-12 overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 text-center">
         {/* Heading */}
         <p className="uppercase text-sm text-gray-500 mb-2">Featured</p>
