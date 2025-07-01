@@ -51,10 +51,10 @@ const ClientMarquee = () => {
         <div className="text-center mb-14">
           
           <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
-           Our Associates and Partners
+            Trusted by Global Hospitality Brands
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We offer seamless and specialized business solutions across various sectors, supporting ease of doing business and promoting entrepreneurship in India.
+            Irvine Hospitality Group has successfully delivered over 400+ projects worldwide, trusted by 150+ hotel owners for turnkey FF&E solutions, design, and manufacturing.
           </p>
         </div>
 

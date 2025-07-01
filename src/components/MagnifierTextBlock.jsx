@@ -7,7 +7,6 @@ const MagnifierTextBlock = () => {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hoveringText, setHoveringText] = useState(false);
 
-  // Smooth animation with requestAnimationFrame
   useEffect(() => {
     let animationFrame;
     const animate = () => {
@@ -25,7 +24,6 @@ const MagnifierTextBlock = () => {
     return () => cancelAnimationFrame(animationFrame);
   }, [targetPos]);
 
-  // Mouse tracking within the container only
   const handleMouseMove = (e) => {
     const rect = containerRef.current.getBoundingClientRect();
     setTargetPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -45,7 +43,7 @@ const MagnifierTextBlock = () => {
           width: hoveringText ? 100 : 60,
           height: hoveringText ? 100 : 60,
           backgroundColor: hoveringText ? 'rgba(255,255,255,0.2)' : 'transparent',
-          backdropFilter: hoveringText ? 'blur(10px)' : 'none',
+          backdropFilter: hoveringText ? 'blur(0px)' : 'none',
           transition: 'width 0.15s ease, height 0.1s ease, background-color 0.15s ease',
         }}
       ></div>
@@ -56,13 +54,13 @@ const MagnifierTextBlock = () => {
           <p
             onMouseEnter={() => setHoveringText(true)}
             onMouseLeave={() => setHoveringText(false)}
-            className="text-4xl md:text-5xl font-light leading-snug text-blue-900"
+            className="text-4xl capitalize md:text-5xl font-light leading-snug text-blue-900"
           >
-            Korus Group<br />
-            advises, designs,<br />
-            and builds workspaces<br />
-            that are <span className="text-orange-400 font-bold">stylish</span><br />
-            in which users feel good.
+            Irvine Hospitality<br />
+            delivers turnkey solutions<br />
+            for <span className="text-orange-400 font-bold">complex hospitality</span> needs.<br />
+            Trusted by 150+ hotel owners<br />
+            across <span className="text-orange-400 font-bold">400+ global projects</span>.
           </p>
         </div>
       </div>

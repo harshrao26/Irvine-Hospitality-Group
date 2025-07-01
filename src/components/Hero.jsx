@@ -88,7 +88,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll-triggered Image Card */}
-      <div
+      {/* <div
         ref={imageRef}
         className="absolute bottom-10 right-10 z-20 bg-white p-4 shadow-md max-w-md"
       >
@@ -101,10 +101,10 @@ export default function HeroSection() {
           Korus Group at the 16th Edition of <br />
           Perspective Europe
         </p>
-      </div>
+      </div> */}
 
       {/* Scroll-triggered CTA (Bottom Left) */}
-      <div className="absolute bottom-10 left-10 z-20">
+      <div className="absolute bottom-10 left-1/2 animate-bounce transition-all ease-in-out duration-1000 z-20">
         <div className="w-12 h-12 rounded-full border z-20 border-white flex items-center justify-center">
           <span className="text-2xl text-white">↓</span>
         </div>
