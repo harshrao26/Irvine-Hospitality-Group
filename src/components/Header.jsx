@@ -96,9 +96,9 @@ export default function Navbar() {
           <button className="bg-[#FF9D31] hover:bg-[#e8891d] text-white px-6 py-2 rounded-full font-semibold text-sm flex items-center gap-1 shadow-sm transition-all duration-200">
             Contact <span className="text-lg">›</span>
           </button>
-          <div className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-sm text-white hover:border-[#FF9D31] transition-colors duration-200">
+          {/* <div className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-sm text-white hover:border-[#FF9D31] transition-colors duration-200">
             EN
-          </div>
+          </div> */}
         </div>
 
         {/* Mobile Toggle */}

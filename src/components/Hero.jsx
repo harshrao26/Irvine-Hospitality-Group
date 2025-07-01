@@ -75,7 +75,7 @@ export default function HeroSection() {
               style={{ fontFamily: "Ethereal" }}
               key={i}
               ref={(el) => (linesRef.current[i] = el)}
-              className="text-4xl font-ethereal  md:text-8xl font-semibold capitalize racking-wide"
+              className="text-5xl font-ethereal  md:text-8xl font-semibold capitalize tracking-wide"
             >
               {line}
             </h1>
@@ -104,7 +104,7 @@ export default function HeroSection() {
       </div> */}
 
       {/* Scroll-triggered CTA (Bottom Left) */}
-      <div className="absolute bottom-10 left-1/2 animate-bounce transition-all ease-in-out duration-1000 z-20">
+      <div className="absolute md:bottom-10 bottom-16 md:left-1/2 left-[45%]  animate-bounce transition-all ease-in-out duration-1000 z-20">
         <div className="w-12 h-12 rounded-full border z-20 border-white flex items-center justify-center">
           <span className="text-2xl text-white">↓</span>
         </div>
