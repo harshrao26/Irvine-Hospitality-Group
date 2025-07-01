@@ -81,9 +81,9 @@ export default function ProcessTimeline() {
                 {step.id}
               </p>
               <p className="text-sm text-gray-700 font-medium">{step.title}</p>
-              {idx !== steps.length - 1 && (
+              {/* {idx !== steps.length - 1 && (
                 <div className="hidden sm:block absolute right-0 top-10 w-full h-1 border-b border-dashed border-gray-300 z-0" />
-              )}
+              )} */}
             </div>
           ))}
         </div>

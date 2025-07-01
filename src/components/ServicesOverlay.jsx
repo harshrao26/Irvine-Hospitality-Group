@@ -17,17 +17,32 @@ const ServicesOverlay = () => {
   const [showCursor, setShowCursor] = useState(false);
 
   const cards = [
-    { title: 'Consulting', desc: 'To transform and support your business', image: img1 },
-    { title: 'Design & build', desc: 'To make your project become a reality', image: img2 },
-    { title: 'FF&E', desc: 'To furnish your professional space', image: img3 },
-    { title: 'Post occupancy maintenance', desc: 'To sustain and ensure the longevity of your project', image: img4 },
+    {
+      title: 'Project Consulting',
+      desc: 'End-to-end advisory & planning for hospitality ventures',
+      image: img1,
+    },
+    {
+      title: 'Design & Brand Submittal',
+      desc: 'Visuals, specifications & 3D renders aligned with brand standards',
+      image: img2,
+    },
+    {
+      title: 'FF&E Procurement',
+      desc: 'Global sourcing, value engineering & logistics management',
+      image: img3,
+    },
+    {
+      title: 'Post-Delivery Support',
+      desc: 'Installation validation & ongoing service after handover',
+      image: img4,
+    },
   ];
 
   const handleMouseMove = (e) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
   };
 
-  // Smooth cursor using requestAnimationFrame
   useEffect(() => {
     let animationFrame;
     const animate = () => {
@@ -37,7 +52,7 @@ const ServicesOverlay = () => {
       }));
       animationFrame = requestAnimationFrame(animate);
     };
-    animationFrame = requestAnimationFrame(animate);
+    animate();
     return () => cancelAnimationFrame(animationFrame);
   }, [cursorPos]);
 
@@ -76,7 +91,7 @@ const ServicesOverlay = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-10" />
 
-      {/* Smooth Custom Cursor */}
+      {/* Custom Cursor */}
       {showCursor && (
         <div
           className="pointer-events-none fixed z-50 hidden md:block"
@@ -92,16 +107,16 @@ const ServicesOverlay = () => {
       )}
 
       {/* Cards */}
-      <div className="relative z-20 h-screen flex items-center justify-center py-60">
-        <div className="grid grid-cols-2 md:grid-cols-4 w-full max-w-7xl">
+      <div className="relative z-20 h-full flex items-center justify-center py-20 md:py-60">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full max-w-7xl">
           {cards.map((card, idx) => (
             <div
               key={idx}
               onMouseEnter={() => setHoveredCard(idx)}
               onMouseLeave={() => setHoveredCard(null)}
-              className="h-screen px-4 flex border-r border-l border-zinc-500 w-full justify-end flex-col transition-all duration-500"
+              className="h-[200px] sm:h-[280px] md:h-screen px-4 flex border-r border-l border-zinc-500 w-full justify-end flex-col transition-all duration-500"
             >
-              <div className="mb-20 hover:mb-32 transition-all duration-500">
+              <div className="mb-10 hover:mb-20 transition-all duration-500">
                 <h3 className="text-lg md:text-xl font-semibold mb-2 text-white">{card.title}</h3>
                 <p className="text-sm md:text-base text-gray-200">{card.desc}</p>
               </div>

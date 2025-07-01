@@ -13,24 +13,30 @@ import i9 from '@/assets/home-images/i9.png';
 
 const images = [i1, i2, i3, i4, i5, i6, i7, i8, i9, i1, i2, i3, i4, i5, i6, i7, i8, i9, i1, i2, i3, i4, i5, i6, i7, i8, i9, i1, i2, i3, i4, i5, i6, i7, i8, i9,];
 
+ 
+
+
 const ImageMarquee = () => {
   return (
-    <div className="overflow-hidden w-full py-10 bg-white relative">
-      <div className="flex gap-5 animate-marquee whitespace-nowrap">
+    <div className="overflow-hidden w-full py-8 bg-white relative">
+      <div className="flex gap-4 animate-marquee whitespace-nowrap">
         {images.concat(images).map((img, idx) => (
-          <div key={idx} className="flex-shrink-0 w-[500px] h-80 transition-transform duration-300 hover:scale-110">
+          <div
+            key={idx}
+            className="flex-shrink-0 w-[250px] sm:w-[300px] md:w-[400px] lg:w-[500px] h-56 sm:h-64 md:h-72 lg:h-80 transition-transform duration-300 hover:scale-105"
+          >
             <Image
               src={img}
               alt={`img-${idx}`}
-              width={208}
-              height={208}
+              width={500}
+              height={320}
               className="object-cover w-full h-full rounded-md"
             />
           </div>
         ))}
       </div>
 
-      {/* Tailwind animation keyframes */}
+      {/* Keyframes for animation */}
       <style jsx>{`
         @keyframes marquee {
           0% {
@@ -49,4 +55,5 @@ const ImageMarquee = () => {
   );
 };
 
+ 
 export default ImageMarquee;

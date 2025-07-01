@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const LayoutProject = () => {
   const scrollRef = useRef(null);
@@ -20,7 +20,15 @@ const LayoutProject = () => {
     'https://unsplash.it/600/400?image=1086',
   ];
 
-  // Handle scroll locking
+  const labels = [
+    'Guestroom Case Goods',
+    'Lobby & Reception Furniture',
+    'Restaurant & Café Seating',
+    'Custom Lighting Solutions',
+    'Upholstered Lounge Sets',
+    'Brand-Approved Room Packages',
+  ];
+
   useEffect(() => {
     const container = containerRef.current;
     const scrollable = scrollRef.current;
@@ -33,11 +41,9 @@ const LayoutProject = () => {
 
     const handleWheel = (e) => {
       if (!canScroll || !scrollable) return;
-
       const { scrollTop, scrollHeight, clientHeight } = scrollable;
       const atTop = scrollTop === 0;
       const atBottom = scrollTop + clientHeight >= scrollHeight;
-
       if (!(e.deltaY < 0 && atTop) && !(e.deltaY > 0 && atBottom)) {
         e.preventDefault();
         scrollable.scrollTop += e.deltaY;
@@ -45,80 +51,81 @@ const LayoutProject = () => {
     };
 
     window.addEventListener('scroll', onScroll);
-    container.addEventListener('wheel', handleWheel, { passive: false });
-
+    container?.addEventListener('wheel', handleWheel, { passive: false });
     return () => {
       window.removeEventListener('scroll', onScroll);
-      container.removeEventListener('wheel', handleWheel);
+      container?.removeEventListener('wheel', handleWheel);
     };
   }, [canScroll]);
 
-  // Mouse tracking
   const handleMouseMove = (e) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
   };
 
-  // Smooth animation using requestAnimationFrame
   useEffect(() => {
     let animationFrame;
-    const smoothMove = () => {
+    const animate = () => {
       setSmoothCursor((prev) => ({
         x: prev.x + (cursorPos.x - prev.x) * 0.1,
         y: prev.y + (cursorPos.y - prev.y) * 0.1,
       }));
-      animationFrame = requestAnimationFrame(smoothMove);
+      animationFrame = requestAnimationFrame(animate);
     };
-    animationFrame = requestAnimationFrame(smoothMove);
+    animationFrame = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationFrame);
   }, [cursorPos]);
 
   return (
-    <div ref={containerRef} className="w-full h-screen max-w-7xl mx-auto relative">
-      <div className="flex w-full h-screen">
-        {/* Sticky Left Panel */}
-        <div className="w-1/3 sticky top-0 h-screen bg-white p-10 flex flex-col justify-center">
-          <h3 className="text-lg text-[#c6d7e3] mb-2">› Your project</h3>
-          <h2 className="text-2xl font-semibold text-[#082135] mb-4 leading-snug">
-            Do you have a<br />layout project?
+    <div
+      ref={containerRef}
+      className="w-full md:block hidden min-h-screen max-w-7xl mx-auto relative px-4"
+    >
+      <div className="flex flex-col md:flex-row w-full min-h-screen">
+        {/* Left Panel */}
+        <div className="md:w-1/3 w-full sticky top-0 md:h-screen bg-white py-12 md:py-20 pr-4 flex flex-col justify-center">
+          <h3 className="text-base text-[#000000] mb-2 uppercase tracking-wide">
+            › Integrated FF&E Services
+          </h3>
+          <h2 className="text-2xl md:text-4xl font-semibold text-[#082135] mb-4 leading-snug">
+            End-to-End Project Support
           </h2>
-          <p className="text-[#082135] text-sm leading-relaxed">
-            Whatever the scope of your project, Korus Group will accompany you
-            every step of the way, putting its team of experts at your disposal
-            to assess custom-made solutions for the layout of professional spaces.
+          <p className="text-[#082135] text-sm md:text-base leading-relaxed">
+            Irvine Hospitality delivers design, procurement, and manufacturing expertise
+            through every phase of your hospitality project — from concept development to final installation.
           </p>
         </div>
 
-        {/* Scrollable Right Panel */}
+        {/* Right Scrollable Panel */}
         <div
           ref={scrollRef}
           onMouseEnter={() => setShowCursor(true)}
           onMouseLeave={() => setShowCursor(false)}
           onMouseMove={handleMouseMove}
-          className="w-2/3 h-screen overflow-y-auto p-10 space-y-10 cursor-none relative"
+          className="md:w-2/3 w-full h-[70vh] md:h-screen overflow-y-auto pt-10 md:pt-20 pb-16 md:pl-8 space-y-10 cursor-none md:cursor-default relative"
         >
           {images.map((src, index) => (
-            <div key={index}>
+            <div key={index} className="w-full">
               <img
                 src={src}
                 alt={`img-${index}`}
-                className="rounded-lg shadow-md w-full"
+                className="rounded-lg shadow-md w-full object-cover max-h-[380px]"
               />
               <p className="mt-2 text-sm font-bold text-[#082135]">
-                {index % 2 === 0 ? 'ACCOMMODATION' : 'CAFÉ & RESTAURANT'}
+                {labels[index % labels.length]}
               </p>
             </div>
           ))}
 
-          {/* Smooth Custom Cursor */}
+          {/* Cursor for Desktop */}
           {showCursor && (
             <div
-              className="pointer-events-none fixed z-50"
+              className="pointer-events-none fixed z-50 hidden md:block"
               style={{
                 top: smoothCursor.y - 40,
                 left: smoothCursor.x - 40,
               }}
             >
-              <div className="w-20 h-20 rounded-full bg-[#00294A] text-white text-xs flex items-center justify-center   border-white">
+              <div className="w-20 h-20 rounded-full bg-[#00294A] text-white text-xs flex items-center justify-center border-white">
                 Scroll here
               </div>
             </div>

@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
         
       </div>
-      <p className='text-[150px] w-full text-center font-extrabold'>
+      <p className='md:text-[150px] uppercase text-[60px] w-full text-center font-extrabold'>
           Irvine Hospitality
           {/*  Group Inc. */}
         </p>

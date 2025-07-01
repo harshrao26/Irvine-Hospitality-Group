@@ -32,40 +32,30 @@ export default function BrandIntro() {
   return (
     <section
       ref={sectionRef}
-      className="py-40 bg-[#002C52] text-white flex items-center justify-center"
+      className="py-20 bg-[#002C52] text-white flex items-center justify-center"
     >
-      <div className="max-w-7xl w-full px-6 grid md:grid-cols-2 items-center gap-10">
-        {/* Left: Logo + Dot-Line-Dot */}
-        <div className="flex flex-  items-center relative h-[200px]">
+      <div className="max-w-7xl w-full px-6 grid md:grid-cols-2 items-center gap-1 0">
+        {/* Left: Logo + Line */}
+        <div className="flex flex-col items-center md:items-start relative h-[100px]">
           <Image src={logo} alt="Logo" width={80} height={80} className="mb-6" />
 
-          <div className='h-80'>
-             {/* Dot A */}
-          <div className="w-[3px] h-[3px] bg-white rounded-full mb-1" />
-
-          {/* Animated Line */}
-          <div
-            ref={lineRef}
-            className="w-[1px] ml-[1px] bg-white transition-all duration-500 origin-top"
-            style={{ height: '0px' }}
-          />
-
-          {/* Dot B */}
-          <div className="w-[3px] h-[3px] bg-white rounded-full mt-1" />
-          </div>
-
-         
+           
         </div>
 
-        {/* Right: Tagline Text */}
-        <div className="text-center md:text-left space-y-3">
-          <h2 className="text-4xl md:text-5xl font-light leading-snug"               style={{ fontFamily: "Ethereal" }}
->
-            Changing <br />
-            spaces <br />
-            Transforming <br />
-            businesses
+        {/* Right: Brand Messaging */}
+        <div className="text-center md:text-left space-y-4">
+          <h2
+            className="text-4xl md:text-5xl font-light leading-snug"
+            style={{ fontFamily: 'Ethereal' }}
+          >
+            Innovating<br />
+            hospitality design,<br />
+            procurement &<br />
+            manufacturing
           </h2>
+          <p className="text-sm md:text-base text-gray-200">
+            A trusted FF&E partner for 150+ hotel owners — delivering over 400 projects worldwide.
+          </p>
         </div>
       </div>
     </section>

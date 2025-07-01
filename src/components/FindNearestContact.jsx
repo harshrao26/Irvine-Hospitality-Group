@@ -1,20 +1,17 @@
 const FindNearestContact = () => {
   return (
-    <div className="bg-[#c6d7e3] w-full h-96 flex items-center justify-center relative px-6">
+    <div className="bg-[#002C52] w-full h-auto md:h-96 flex items-center justify-center relative px-6 py-12 md:py-0">
       {/* Content Wrapper */}
-      <div className="max-w-7xl w-full flex justify-between items-center relative">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Text Block */}
-        <div>
-          <p className="text-sm text-[#082135] mb-2">
-            Our first service is to be where you are
+        <div className="text-center md:text-left">
+          <p className="text-sm text-[#fff] mb-2">
+            We bring solutions wherever you are
           </p>
-          <h2 className="text-5xl font-light text-[#082135] leading-tight mb-4">
-            Find your nearest<br />contact
+          <h2 className="text-3xl md:text-5xl font-light text-[#fff] leading-tight mb-4">
+            Find your nearest<br />Irvine contact
           </h2>
-          <div className="w-10 h-[2px] bg-[#082135] mt-2 relative">
-            <span className="absolute left-0 w-1 h-1 bg-[#082135] top-[-4px] rounded-full" />
-            <span className="absolute right-0 w-1 h-1 bg-[#082135] top-[-4px] rounded-full" />
-          </div>
+           
         </div>
 
         {/* CTA Button */}

@@ -33,7 +33,7 @@ const MagnifierTextBlock = () => {
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative w-full h-screen bg-white overflow-hidden"
+      className="relative w-full min-h-[ 70vh]  h-[80vh] bg-white overflow-hidden"
     >
       {/* Magnifier cursor */}
       <div
@@ -49,18 +49,17 @@ const MagnifierTextBlock = () => {
       ></div>
 
       {/* Text Content */}
-      <div className="max-w-7xl mx-auto h-full flex items-center px-4">
+      <div className="max-w-7xl mx-auto h-full flex items-center px-4 py-12 md:py-0">
         <div className="border-l border-blue-900 pl-6">
           <p
             onMouseEnter={() => setHoveringText(true)}
             onMouseLeave={() => setHoveringText(false)}
-            className="text-4xl capitalize md:text-5xl font-light leading-snug text-blue-900"
+            className="text-3xl md:text-5xl font-light leading-snug text-blue-900 capitalize"
           >
-            Irvine Hospitality<br />
-            delivers turnkey solutions<br />
-            for <span className="text-orange-400 font-bold">complex hospitality</span> needs.<br />
-            Trusted by 150+ hotel owners<br />
-            across <span className="text-orange-400 font-bold">400+ global projects</span>.
+            One-stop FF&E partner<br />
+            for design, procurement,<br />
+            and <span className="text-orange-400 font-bold">manufacturing</span><br />
+            built for <span className="text-orange-400 font-bold">performance, style, and delivery</span>.
           </p>
         </div>
       </div>
