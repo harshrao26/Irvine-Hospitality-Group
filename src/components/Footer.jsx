@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Left Logo + Description */}
         <div className="space-y-6">
           <div className="w-10">
-            <Image src="/logo.svg" alt="Logo" width={40} height={40} />
+            {/* <Image src="/logo.svg" alt="Logo" width={40} height={40} /> */}
           </div>
           <p className="text-sm">
             Experts in consulting, design & build, FF&E, and post occupancy
