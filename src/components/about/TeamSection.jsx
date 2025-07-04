@@ -1,10 +1,10 @@
 import TeamCard from '@/components/TeamCard';
 
 const teamMembers = [
-  { name: 'Alexander Spiridigliozzi', title: 'Director of Operations', image: '/team/alexander.jpg' },
-  { name: 'Fabian MEDEIROS', title: 'Design & Build Director', image: '/team/fabian.jpg' },
-  { name: 'John Doe', title: 'Finance Head', image: '/team/member1.jpg' },
-  { name: 'Jane Smith', title: 'Marketing Lead', image: '/team/member2.jpg' }
+  { name: 'Alexander Spiridigliozzi', title: 'Director of Operations', image: 'https://images.unsplash.com/photo-1594751684241-bcef815d5a57?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { name: 'Fabian MEDEIROS', title: 'Design & Build Director', image: 'https://images.unsplash.com/photo-1648183185045-7a5592e66e9c?q=80&w=1084&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { name: 'John Doe', title: 'Finance Head', image: 'https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+  { name: 'Jane Smith', title: 'Marketing Lead', image: 'https://images.unsplash.com/photo-1509839862600-309617c3201e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
 ];
 
 export default function TeamSection() {

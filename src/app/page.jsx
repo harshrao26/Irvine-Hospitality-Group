@@ -14,6 +14,8 @@ import BestCollection from "@/components/BestCollection";
 import ClientMarquee from "@/components/ClientMarquee";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import LayoutProjectMobile from "@/components/LayoutProjectMobile";
+import FaqSection from "@/components/FaqSection";
+
 
 
 const Page = () => {
@@ -36,6 +38,7 @@ const Page = () => {
       <LayoutProject className="md:block hidden"/>
       <BusinessCTASection />
       <ImageMarquee />
+      <FaqSection />
     </div>
   );
 };

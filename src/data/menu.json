@@ -4,23 +4,7 @@
     "href": "/",
     "sublinks": []
   },
-  
   {
-    "label": "Our Products",
-    "href": "/products",
-    "sublinks": [
-       
-    ]
-  },
-
-  {
-    "label": "Portfolio",
-    "href": "/portfolio",
-    "sublinks": [
-       
-    ]
-  },
-    {
     "label": "About Us",
     "href": "/about",
     "sublinks": [
@@ -29,10 +13,18 @@
       { "name": "Vision", "href": "/about#vision" }
     ]
   },
- 
   {
-    "label": "References",
-    "href": "/references",
+    "label": "Services",
+    "href": "/services",
+    "sublinks": [
+      { "name": "Coworking Consulting", "href": "/services/consulting" },
+      { "name": "Space Design", "href": "/services/design" },
+      { "name": "Marketing", "href": "/services/marketing" }
+    ]
+  },
+  {
+    "label": "Resources",
+    "href": "/resources",
     "sublinks": [
       { "name": "Blog", "href": "/blog" },
       { "name": "Guides", "href": "/guides" },
